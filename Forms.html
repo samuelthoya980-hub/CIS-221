@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .gender-options, .hobby-options {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter a password" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="100" placeholder="Enter your age">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label>Gender:</label>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+        </div>
+
+        <label>Hobbies:</label>
+        <div class="hobby-options">
+            <input type="checkbox" id="sports" name="hobbies" value="Sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="reading" name="hobbies" value="Reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="music" name="hobbies" value="Music">
+            <label for="music">Music</label>
+        </div>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">--Select Country--</option>
+            <option value="kenya">Kenya</option>
+            <option value="uganda">Uganda</option>
+            <option value="tanzania">Tanzania</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="photo">Upload Profile Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <label for="favcolor">Favorite Color:</label>
+        <input type="color" id="favcolor" name="favcolor">
+
+        <label for="experience">Experience Level:</label>
+        <input type="range" id="experience" name="experience" min="0" max="10">
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+
+        <button type="submit">Register</button>
+        <button type="reset" style="background-color: gray;">Reset</button>
+    </form>
+</div>
+
+</body>
+</html>
